@@ -1,0 +1,26 @@
+\frametitle {Named Theorems, Propositions, and other stuff}
+
+\newtheorem{prop}{Proposition}
+
+First define the name for a theorem.
+
+\begin{verbatim}
+\newtheorem{prop}{Proposition}
+\end{verbatim}
+
+After the theorem has been named, use as follows:
+
+\begin{verbatim}
+\begin{prop}
+If the sea is sweet, then I am the King of England.
+\end{prop}
+\end{verbatim}
+
+Output is as follows:
+
+\begin{prop}
+If the sea is sweet, then I am the King of England.
+\end{prop}
+
+
+

@@ -1,0 +1,21 @@
+Reproduce the following page using LaTeX. Submit a .tex file called latex2.tex.
+
+Groupwork is not allowed.
+
+HINTS
+
+1) For the math parts, you may need to use one or more of the following packages:
+amsmath,amssymb,amsthm,amsfonts.
+These are standard tetex or miktex packages from the American Mathematical Society.
+
+2) The slides presented in class are available. Use them or a GUI editor to look up symbols.
+
+3) To get correctly sized symbols, use smart symbols. For instance, use \sum instead of \Sigma
+
+4) The page format used is "article" with a 12 pt Times New Roman font, with no modifications.
+
+5) Descriptive portions (text paragraphs) may be copied / pasted from the provided PDF, to save time.
+
+6) The references must be dynamic and link. Use the hyperref package.
+
+7) For the figure, you may use img288.png provided or any other image you prefer.

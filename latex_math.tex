@@ -1,0 +1,311 @@
+\documentclass[10pt,fullpage]{beamer}
+\mode<presentation>
+
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts} % Typical maths resource packages
+
+
+
+\title{ Mathematics in \LaTeX}
+
+\author{Matthew Bennett \\
+{\small \today }}
+
+ \date{ }
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Math Mode}
+Before you can enter math commands, you must be in ``math mode''.
+
+To enter math commands in the same line as your text, such as $x^2 -
+11 = 0$ use a single \$ and another \$ to exit math mode.
+
+For a more formal look, use the \$\$ symbol to begin and end the
+line offset math mode. This will offset the math symbols onto a
+separate line and center it on the page. For instance $$\sin^2 x +
+cos^2 x = 1$$ will break the text and automatically center.
+
+Math text will automatically eliminate spaces and italicize all
+text. If we type regular text in math mode, it will $probably not
+look right.$ We can use the \ text\{\} command while in math mode to
+generate normal text, such as $h \text{  (the hypoteneuse)} = a^2 +
+b^2$.
+
+\end{frame}
+
+\begin{frame}{Subscripts and Superscripts}
+
+To raise something to a power, prefix the power with the carat
+command. x\^{}y produces $$x^y$$.
+
+Similarly, to produce a subscript, prefix it with an underscore
+command. x\_{}d produces $$x_d$$.
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{List of Greek Symbols}
+\begin{verbatim}
+\alpha               \theta               o \tau
+ \beta                \vartheta           \pi                 \upsilon
+ \gamma               \gamma              \varpi              \phi
+ \delta               \kappa              \rho                \varphi
+ \epsilon             \lambda             \varrho             \chi
+ \varepsilon          \mu                 \sigma              \psi
+ \zeta                \nu                 \varsigma           \omega
+ \eta                 \xi
+ \Gamma               \Lambda             \Sigma              \Psi
+ \Delta               \Xi                 \Upsilon            \Omega
+ \Theta               \Pi                 \Phi
+\end{verbatim}
+
+$$\alpha               \theta               o \tau
+ \beta                \vartheta           \pi                 \upsilon
+ \gamma               \gamma              \varpi              \phi
+ \delta               \kappa              \rho                \varphi
+ \epsilon             \lambda             \varrho             \chi
+ \varepsilon          \mu                 \sigma              \psi
+ \zeta                \nu                 \varsigma           \omega
+ \eta                 \xi
+ \Gamma               \Lambda             \Sigma              \Psi
+ \Delta               \Xi                 \Upsilon            \Omega
+ \Theta               \Pi                 \Phi
+$$
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{List of Binary Operators}
+\begin{verbatim}
+ \pm                  \cap                \diamond                    \oplus
+ \mp                  \cup                \bigtriangleup              \ominus
+ \times               \uplus              \bigtriangledown            \otimes
+ \div                 \sqcap              \triangleleft               \oslash
+ \ast                 \sqcup              \triangleright              \odot
+ \star                \vee                \lhd^b                    \bigcirc
+ \circ                \wedge              \rhd^b                    \dagger
+ \bullet              \setminus           \unlhd^b                  \ddagger
+ \cdot                \wr                 \unrhd^b                  \amalg
+ +                    -
+\end{verbatim}
+
+$$
+\pm                  \cap                \diamond                    \oplus
+ \mp                  \cup                \bigtriangleup              \ominus
+ \times               \uplus              \bigtriangledown            \otimes
+ \div                 \sqcap              \triangleleft               \oslash
+ \ast                 \sqcup              \triangleright              \odot
+ \star                \vee                \lhd^b                    \bigcirc
+ \circ                \wedge              \rhd^b                    \dagger
+ \bullet              \setminus           \unlhd^b                  \ddagger
+ \cdot                \wr                 \unrhd^b                  \amalg
+ +                    -
+$$
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{List of Relational Symbols}
+\begin{verbatim}
+ \leq                 \geq                \equiv              \models
+ \prec                \succ               \sim                \perp
+ \preceq              \succeq             \simeq              \mid
+ \ll                  \gg                 \asymp              \parallel
+ \subset              \supset             \approx             \bowtie
+ \subseteq            \supseteq           \cong               \Join$^b$
+ \sqsubset$^b$        \sqsupset$^b$       \neq                \smile
+ \sqsubseteq          \sqsupseteq         \doteq              \frown
+ \in                  \ni                 \propto             =
+ \vdash               \dashv              <                   >
+ :
+\end{verbatim}
+
+$$
+ \leq                 \geq                \equiv              \models
+ \prec                \succ               \sim                \perp
+ \preceq              \succeq             \simeq              \mid
+ \ll                  \gg                 \asymp              \parallel
+ \subset              \supset             \approx             \bowtie
+ \subseteq            \supseteq           \cong
+ \neq                \smile
+ \sqsubseteq          \sqsupseteq         \doteq              \frown
+ \in                  \ni                 \propto             =
+ \vdash               \dashv              <                   >
+ :
+$$
+
+\section{For more} http://www.math.harvard.edu/texman/node21.html
+lists all symbols available.
+
+\end{frame}
+
+\begin{frame}{Equation environment} The latex equation environment
+automatically enters math mode, numbers the equation, and centers
+the text on the page. Here we have used the equation environment
+with a forward reference to Einstein's famous equation.
+\ref{rest_energy}
+
+\begin{equation}
+E = mc^2 \label{rest_energy}
+\end{equation}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Align environment} The align environment automatically
+enters math mode, numbers the equation, and centers the text on the
+page, just like the equation environment. Additionally, multiple
+lines may be aligned and numbered.
+
+\begin{verbatim}
+\begin{align}
+x&=y & X&=Y & a&=b+c\\
+x’&=y’ & X’&=Y’ & a’&=b\\
+x+x’&=y+y’ & X+X’&=Y+Y’ & a’b&=c’b
+\end{align}
+\end{verbatim}
+
+\begin{align}
+x&=y & X&=Y & a&=b+c\\
+x’&=y’ & X’&=Y’ & a’&=b\\
+x+x’&=y+y’ & X+X’&=Y+Y’ & a’b&=c’b
+\end{align}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Smart symbols}
+
+Some symbols will increase or decrease their size to match the other
+symbols associated with them.
+
+\begin{verbatim}
+c^2 = \sqrt{a^2 + b^2}
+\end{verbatim}
+
+\begin{equation}
+c^2 = \sqrt{a^2 + b^2}
+\end{equation}
+
+\begin{verbatim}
+\int{_a}{^b} \frac{\sqrt{\sum{x^2 + y^2 + z^z}}}{6}ds
+\end{verbatim}
+
+\begin{equation}
+\int_a^b \frac{\sqrt{\sum{sx^2 + y^2s^2 + z^z}}}{6}ds
+\end{equation}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Smart Parenthesis}
+
+You can use smart parenthesis, a type of smart symbol, to
+automatically size the parenthesis in math mode to other smart
+symbols.
+\begin{verbatim}
+$$ \left(\sum a_i^2\right)^{1/2} $$
+\end{verbatim}
+
+
+$$ \left(\sum a_i^2\right)^{1/2} $$
+
+You can also use \begin{verbatim} \left[, \right], \left\{,
+\right\}.\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\frametitle{Cases}
+
+\begin{verbatim}
+\delta_{ij} =
+\begin{cases}
+1& i=j},\\
+0& \text{Everywhere else}.
+\end{cases}
+\end{verbatim}
+
+$$
+\delta_{ij}=\begin{cases}
+1& i=j,\\
+0& \text{Everywhere else}.
+\end{cases}
+$$
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Mathematical Nightmares}
+
+Multiple integrals can be produced with int, iint, iiint, or
+idotsint.
+
+\begin{verbatim}
+\idotsint f(x_1, x_2, \ldots) dx_1\ dx_2\ldots
+\end{verbatim}
+
+$$\idotsint f(x_1, x_2, \ldots) dx_1\ dx_2\ldots$$
+
+Continued Fractions can be done by using cfrac (similar to frac).
+
+\begin{verbatim}
+\cfrac{1}{\sqrt{2}+ \cfrac{1}{\sqrt{2}+ \cfrac{1}{\sqrt{2}+\dotsb
+}}}
+\end{verbatim}
+
+$$\cfrac{1}{\sqrt{2}+
+\cfrac{1}{\sqrt{2}+ \cfrac{1}{\sqrt{2}+\dotsb }}}$$
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Custom commands}
+
+\begin{verbatim}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\end{verbatim}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+
+This provides an absolute value command abs that can be used in math
+mode as follows to produce $\abs {x - 5}$
+
+\begin{verbatim}
+$\abs {x - 5}$
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Named Theorems, Propositions, and other stuff}
+
+\newtheorem{prop}{Proposition}
+
+First define the name for a theorem.
+
+\begin{verbatim}
+\newtheorem{prop}{Proposition}
+\end{verbatim}
+
+After the theorem has been named, use as follows:
+
+\begin{verbatim}
+\begin{prop}
+If the sea is sweet, then I am the King of England.
+\end{prop}
+\end{verbatim}
+
+Output is as follows:
+
+\begin{prop}
+If the sea is sweet, then I am the King of England.
+\end{prop}
+
+
+
+\end{frame}
+
+\end{document}
